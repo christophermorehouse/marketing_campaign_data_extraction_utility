@@ -1,0 +1,5 @@
+Script Parameters:
+- apollo_auth_token: xxxx-xxxxxxxxxxxxxxxxx
+- seniority_level: ["c_suite", "manager", "director", "owner", "founder", "vp", "head"]
+- source_file_name: targeted_organizations.csv
+- target_file_name: enriched_targeted_organizations.csv
