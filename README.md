@@ -44,4 +44,30 @@ You can then execute the build.ps1 powershell script to build the executable.
 
 3. Save the changes in env_config.yaml and run main.py or double-click the marketing_campaign_data_extraction_utility.exe if you ran the build script. 
 
-4. Follow the on-screen instructions. Once complete, a new CSV file (with the name specified in target_file_name above) will get created in the current directory. 
+4. Follow the on-screen instructions. Once complete, a new CSV file (with the name specified in target_file_name above) will get created in the current directory.
+
+## Build an executable binary for deployment
+
+The preferred method for deployment is to build a self-contained package that includes all the dependencies as well as a run-time environment.
+Using this method, users will not have to install python or any dependency libraries. They just edit the env_config.yaml and execute the binary.
+
+cx_Freeze is used to build the binary and will need to be installed first in order to create the deployment package. For more information on cx_Freeze:
+
+Project page: https://pypi.org/project/cx-Freeze/
+
+Project documentation: https://cx-freeze.readthedocs.io/en/latest/
+
+You can install cx_Freeze in a Python environment by running the following command:
+
+```sh
+pip install --upgrade cx_Freeze
+```
+
+Once cx_Freeze is installed you can continue with building the self-contained package by executing the build script with the following command: 
+
+```sh
+./build.ps1
+```
+
+A "build" folder will get created that contains the directory with the executable and dependancy library. A zip of the executable directory also gets created.
+You can send this zip file to users or wherever the script will be deployed to.
